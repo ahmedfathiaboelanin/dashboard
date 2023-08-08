@@ -1,0 +1,83 @@
+section{
+    height: calc(100vh - 44px);
+    overflow-y: auto;
+}
+aside{
+    background-color: var(--blue);
+    direction: rtl;
+    overflow-x: hidden;
+    transition: all ease-in-out .5s;
+}
+.hide{
+    width: 0px !important;
+}
+.accordion{
+    background-color: transparent !important;
+}
+.accordion-item{
+    border-radius: 0px !important;
+    background-color: transparent !important;
+    border: none !important;
+    margin-bottom: 10px;
+}
+.accordion-item button{
+    border-right: 3px solid transparent;
+    border-radius: 0px;
+    color: white !important;
+    background-color: transparent !important;
+    font-size: 12px;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: space-between !important;
+}
+.accordion-item button span, aside .link{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.accordion-body{
+    color: white !important;
+    font-size: 12px;
+    padding: 0;
+    background-color: var(--dark_blue);
+}
+.accordion-body ul{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    list-style: none;
+    width: 100% !important;
+    padding: 0;
+}
+.accordion-body li{
+    padding: 15px 30px 15px 15px;
+    width: 100% !important;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.accordion-body li:hover{
+    background-color: gray;
+}
+.accordion-button::after{
+    position: absolute;
+    left: 10px;
+    color: white !important;
+}
+aside .link{
+    color: white;
+    font-size: 12px;
+    height: 20px;
+    padding: 0px 20px;
+}
+.link:nth-child(1){
+    margin-bottom: 10px;
+}
+aside i{
+    font-size: 14px;
+}
+.accordion-item:has(.show) .accordion-button{
+    border-right: 3px solid white ;
+}
